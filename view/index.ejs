@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="author" content="potenzaglobalsolutions.com" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Exames</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/images/favicon.ico" />
+
+  <!-- Plugins -->
+  <link rel="stylesheet" type="text/css" href="/css/plugins-css.css" />
+  <!-- Typography -->
+  <link rel="stylesheet" type="text/css" href="/css/typography.css" />
+
+  <!-- Shortcodes -->
+  <link rel="stylesheet" type="text/css" href="/css/shortcodes/shortcodes.css" />
+
+  <!-- Style -->
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+
+  <link rel="stylesheet" href="/css/skins/skin-steelblue.css">
+
+  <!-- Responsive -->
+  <link rel="stylesheet" type="text/css" href="/css/responsive.css" />
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <!--=================================
+ preloader -->
+
+    <div id="pre-loader">
+      <img src="/images/pre-loader/loader-21.gif" alt="">
+    </div>
+
+    <!--=================================
+ preloader -->
+
+
+    <!--=================================
+ header -->
+
+    <header id="header" class="header default">
+
+    </header>
+
+    <!--=================================
+ header -->
+
+
+    <!--=================================
+page-title-->
+
+    <section class="page-title bg-overlay-black-60 parallax" data-jarallax='{"speed": 0.6}' style="background-image: url(/images/Fotos/banner.png);">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-title-name">
+              <h1>Exames</h1>
+              <p>Coleta Domiciliar</p>
+            </div>
+            <!-- <ul class="page-breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i> Home</a> <i class="fa fa-angle-double-right"></i></li>
+            <li><a href="#">page</a> <i class="fa fa-angle-double-right"></i></li>
+            <li><span>Faqs 02</span> </li>
+       </ul> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--=================================
+page-title -->
+
+    <!--=================================
+ faq-->
+
+    <section class="faq white-bg page-section-ptb">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12">
+            <div class="section-title text-center">
+              <h2 class="title-effect">Hospital Israelita Albert Einstein</h2>
+              <br>
+              <p style="text-align: justify; margin-top: 10px;">Para sua comodidade e agilidade no atendimento, o Einstein disponibiliza o serviço de Coleta Domiciliar para
+                exames laboratoriais e de cardiologia (eletrocardiograma, M.A.P.A. e Holter). A coleta poderá ser realizada
+                conforme sua necessidade e preferência e o valor da taxa do serviço é de R$ 70,00, para a Grande São Paulo*.
+                O serviço é disponibilizado também na Baixada Santista e outras localidades</p>
+              <br>
+              <p>Para mais informações sobre regiões de atendimento, valores de exames e cobertura de convênio dos exames solicitados,
+                preencha o formulário ou entre em contato pelo telefone (11) 2151-1233.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-md-12">
+            <div class="accordion shadow">
+              <div class="acd-group acd-active">
+                <a href="#" class="acd-heading" id="card" ng-controller="agendamentoCardCtrl">Cardiológico</a>
+                <div class="acd-des">
+                  <section class="white-bg page-section-ptb o-hidden">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                          <div id="register-form" class="register-form">
+                            <div class="row">
+                              <div class="section-field col-md-6">
+                                <label>Primeiro nome*</label>
+                                <div class="field-widget">
+                                  <input type="text" class="form-control" placeholder="Primeiro nome" name="name" id="card_Nome" required>
+                                </div>
+                              </div>
+                              <div class="section-field col-md-6">
+                                <label>Último nome*</label>
+                                <div class="field-widget">
+                                  <input type="email" class="form-control" placeholder="Último nome" name="email" id="card_SobreNome" required>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="section-field">
+                              <label>CPF/Passaporte* </label>
+                              <div class="field-widget">
+                                <input class="Password form-control" type="text" placeholder="CPF/Passaporte" name="cpf" id="card_CPF" required>
+                              </div>
+                            </div>
+                            <div class="section-field">
+                              <label>Email *</label>
+                              <div class="field-widget">
+                                <input class="email form-control" type="text" placeholder="Email" name="email" id="card_Email" required>
+                              </div>
+                            </div>
+                            <div class="section-field">
+                              <label>Telefone (Fixo e/ou Celular) *</label>
+                              <div class="field-widget">
+                                <input id="phone" class="phone form-control" type="text" placeholder="Telefone" name="phone" id="card_Telefone" required>
+                              </div>
+                            </div>
+                            <div class="section-field textarea">
+                              <textarea class="input-message form-control" placeholder="Mensagem" rows="7" name="message" id="card_Msg"></textarea>
+                            </div>
+                            <label for='selecao-arquivo' class="button icon mb-10 mr-10" style="margin-top: 10px;">Pedido de Exame &#187;</label>
+                            <input id='selecao-arquivo' type='file' style="display: none;" fileread="vm.uploadme">
+                          </div>
+                        </div>
+                      </div>
+                  </section>
+                  </div>
+                </div>
+                <div class="acd-group">
+                  <a href="#" class="acd-heading" id="lab">Laboratorial</a>
+                  <div class="acd-des">
+                    <section class="white-bg page-section-ptb o-hidden">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-lg-12 col-md-12">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-8 col-md-offset-2">
+                            <div id="register-form" class="register-form">
+                              <div class="row">
+                                <div class="section-field col-md-6">
+                                  <label>Primeiro nome*</label>
+                                  <div class="field-widget">
+                                    <input type="text" class="form-control" placeholder="Primeiro nome" name="name" id="lab_Nome">
+                                  </div>
+                                </div>
+                                <div class="section-field col-md-6">
+                                  <label>Último nome*</label>
+                                  <div class="field-widget">
+                                    <input type="email" class="form-control" placeholder="Último nome" name="email" id="lab_SobreNome">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="section-field">
+                                <label>CPF/Passaporte* </label>
+                                <div class="field-widget">
+                                  <input class="Password form-control" type="text" placeholder="CPF/Passaporte" name="cpf" id="lab_CPF">
+                                </div>
+                              </div>
+                              <div class="section-field">
+                                <label>Email *</label>
+                                <div class="field-widget">
+                                  <input class="email form-control" type="text" placeholder="Email" name="email" id="lab_Email">
+                                </div>
+                              </div>
+                              <div class="section-field">
+                                <label>Telefone (Fixo e/ou Celular) *</label>
+                                <div class="field-widget">
+                                  <input id="phone" class="phone form-control" type="text" placeholder="Telefone" name="phone" id="lab_Telefone">
+                                </div>
+                              </div>
+                              <div class="section-field textarea">
+                                <textarea class="input-message form-control" placeholder="Mensagem" rows="7" name="message" id="lab_msg"></textarea>
+                              </div>
+                              <label for='selecao-arquivo-lab' class="button icon mb-10 mr-10" style="margin-top: 10px;">Pedido de Exame &#187;</label>
+                              <input id='selecao-arquivo-lab' type='file' style="display: none;">
+                            </div>
+                          </div>
+                        </div>
+                    </section>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12 text-center mt-40">
+                <h6> *Para demais localidades, por favor, consulte a disponibilidade do serviço e o valor da taxa. </h6>
+              </div>
+            </div>
+            <div class="row" style="text-align: center">
+              <a class="button icon mb-10 mr-10" data-toggle="modal" data-target="#myModal" href="#" style="margin-top: 10px;">
+                <img src="/images/Fotos/mobile-logo.png" alt="" srcset="">
+                <span>Enviar Solicitação</span>
+              </a>
+            </div>
+          </div>
+    </section>
+
+    <!--=================================
+ careers-->
+
+
+    <!--=================================
+action box- -->
+
+    <!-- <section class="action-box theme-bg full-width">
+      <div class="container"> -->
+    <!-- <div class="row">
+     <div class="col-lg-12 col-md-12">
+        <h3><strong> Webster: </strong> The most powerful template ever on the market</h3>
+        <p>Create tailor-cut websites with the exclusive multi-purpose responsive template along with powerful features.</p>
+        <a class="button border white" href="#">
+          <span>Purchase Now</span>
+          <i class="fa fa-download"></i>
+       </a> 
+    </div>
+  </div> -->
+    <!-- </div>
+    </section> -->
+
+    <!--=================================
+action box- -->
+
+
+    <!--=================================
+ footer -->
+
+
+    <!--=================================
+ footer -->
+
+    </div>
+
+    <div id="back-to-top">
+      <a class="top arrow" href="#top">
+        <i class="fa fa-angle-up"></i>
+      </a>
+    </div>
+
+    <!--=================================
+ jquery -->
+
+    <!-- jquery -->
+    <script type="text/javascript" src="/js/jquery-1.12.4.min.js"></script>
+
+    <!-- plugins-jquery -->
+    <script type="text/javascript" src="/js/plugins-jquery.js"></script>
+
+    <!--Angular-->
+
+    <script type="text/javascript" src="/js/Angular/angular.min.js"></script>
+    <script src="/js/Angular/app.js"></script>
+    <!-- plugin_path -->
+    <script type="text/javascript">var plugin_path = 'js/';</script>
+
+    <!-- custom -->
+    <script type="text/javascript" src="/js/custom.js"></script>
+   
+</body>
+
+</html>
