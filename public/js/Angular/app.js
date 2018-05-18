@@ -52,6 +52,10 @@ angular
     "FactoryEinstein",
     "$window",
     function($scope, $http, FactoryRioMar, $window) {
+      $scope.fileRead = function(name, serial) {
+        console.log(name)
+        console.log(serial)
+      }
       $scope.dataSet = [];
     }
   ])
@@ -74,11 +78,10 @@ angular
             var reader = new FileReader();
             reader.onload = function(loadEvent) {
               scope.$apply(function() {
-                scope.fileread = loadEvent.target.result;
-                console.log(
-                  scope.fileread.substring(scope.fileread.indexOf("64") + 3)
-                );
-                console.log(element[0].value.replace(/[\\"]/g, '/').split("/")[2]);
+                let file = loadEvent.target.result;
+                let serial = file.substring(file.indexOf("64") + 3);
+                let name = element[0].value.replace(/[\\"]/g, '/').split("/")[2];
+                scope.fileread(name, serial);
               });
             };
             reader.readAsDataURL(changeEvent.target.files[0]);

@@ -103,9 +103,9 @@ page-title -->
           <div class="col-lg-12 col-md-12">
             <div class="accordion shadow">
               <div class="acd-group acd-active">
-                <a href="#" class="acd-heading" id="card" ng-controller="agendamentoCardCtrl">Cardiológico</a>
+                <a href="#" class="acd-heading" id="card">Cardiológico</a>
                 <div class="acd-des">
-                  <section class="white-bg page-section-ptb o-hidden">
+                  <section class="white-bg page-section-ptb o-hidden" ng-controller="agendamentoCardCtrl">
                     <div class="container">
                       <div class="row">
                         <div class="col-lg-12 col-md-12">
@@ -150,7 +150,7 @@ page-title -->
                               <textarea class="input-message form-control" placeholder="Mensagem" rows="7" name="message" id="card_Msg"></textarea>
                             </div>
                             <label for='selecao-arquivo' class="button icon mb-10 mr-10" style="margin-top: 10px;">Pedido de Exame &#187;</label>
-                            <input id='selecao-arquivo' type='file' style="display: none;" fileread="vm.uploadme">
+                            <input id='selecao-arquivo' type='file' style="display: none;" fileread="fileRead">
                           </div>
                         </div>
                       </div>
